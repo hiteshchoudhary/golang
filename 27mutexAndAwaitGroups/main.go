@@ -13,7 +13,7 @@ func main() {
 
 	var score = []int{0}
 
-	wg.Add(3)
+	wg.Add(4)
 	go func(wg *sync.WaitGroup, m *sync.RWMutex) {
 		fmt.Println("One R")
 		mut.Lock()
