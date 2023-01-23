@@ -17,20 +17,20 @@ func main() {
 	// R ONLY
 	go func(ch <-chan int, wg *sync.WaitGroup) {
 
-		val, isChanelOpen := <-myCh
+		val, isChanelOpen := <-ch
 
 		fmt.Println(isChanelOpen)
 		fmt.Println(val)
 
-		//fmt.Println(<-myCh)
+		//fmt.Println(<-ch)
 
 		wg.Done()
 	}(myCh, wg)
 	// send ONLY
 	go func(ch chan<- int, wg *sync.WaitGroup) {
-		myCh <- 0
-		close(myCh)
-		// myCh <- 6
+		ch <- 0
+		close(ch)
+		// ch <- 6
 		wg.Done()
 	}(myCh, wg)
 
