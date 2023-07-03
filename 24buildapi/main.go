@@ -70,7 +70,7 @@ func getAllCourses(w http.ResponseWriter, r *http.Request) {
 
 func getOneCourse(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Get one course")
-	w.Header().Set("Content-Type", "applicatioan/json")
+	w.Header().Set("Content-Type", "application/json")
 
 	// grab id from request
 	params := mux.Vars(r)
