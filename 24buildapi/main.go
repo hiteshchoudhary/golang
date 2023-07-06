@@ -64,13 +64,13 @@ func serveHome(w http.ResponseWriter, r *http.Request) {
 
 func getAllCourses(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Get all courses")
-	w.Header().Set("Content-Type", "applicatioan/json")
+	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(courses)
 }
 
 func getOneCourse(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Get one course")
-	w.Header().Set("Content-Type", "applicatioan/json")
+	w.Header().Set("Content-Type", "application/json")
 
 	// grab id from request
 	params := mux.Vars(r)
@@ -88,7 +88,7 @@ func getOneCourse(w http.ResponseWriter, r *http.Request) {
 
 func createOneCourse(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Create one course")
-	w.Header().Set("Content-Type", "applicatioan/json")
+	w.Header().Set("Content-Type", "application/json")
 
 	// what if: body is empty
 	if r.Body == nil {
@@ -120,7 +120,7 @@ func createOneCourse(w http.ResponseWriter, r *http.Request) {
 
 func updateOneCourse(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Update one course")
-	w.Header().Set("Content-Type", "applicatioan/json")
+	w.Header().Set("Content-Type", "application/json")
 
 	// first - grab id from req
 	params := mux.Vars(r)
@@ -143,7 +143,7 @@ func updateOneCourse(w http.ResponseWriter, r *http.Request) {
 
 func deleteOneCourse(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Delete one course")
-	w.Header().Set("Content-Type", "applicatioan/json")
+	w.Header().Set("Content-Type", "application/json")
 
 	params := mux.Vars(r)
 
