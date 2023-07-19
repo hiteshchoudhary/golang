@@ -18,6 +18,11 @@ app.get('/get', (req, res) => {
     res.status(200).json({message: "Hello from learnCodeonline.in"})
   })
 
+app.post('/', (req, res) => {
+    let myJson = req.body;      // your JSON
+	
+	res.status(200).send(myJson);
+})
 
 app.post('/post', (req, res) => {
     let myJson = req.body;      // your JSON
