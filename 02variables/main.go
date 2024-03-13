@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-const LoginToken string = "ghabbhhjd" // Public
+const LoginToken string = "hitesh choudhary" // Public
 
 func main() {
 	var username string = "hitesh"
@@ -17,7 +17,7 @@ func main() {
 	fmt.Println(smallVal)
 	fmt.Printf("Variable is of type: %T \n", smallVal)
 
-	var smallFloat float64 = 255.45544511254451885
+	var smallFloat float64 = 255.455445112
 	fmt.Println(smallFloat)
 	fmt.Printf("Variable is of type: %T \n", smallFloat)
 
