@@ -64,7 +64,7 @@ func serveHome(w http.ResponseWriter, r *http.Request) {
 
 func getAllCourses(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("Get all courses")
-	w.Header().Set("Content-Type", "applicatioan/json")
+	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(courses)
 }
 
